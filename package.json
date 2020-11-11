@@ -1,0 +1,11 @@
+{
+  "name": "laba",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/maulitt/lab_web_react",
+  "author": "regina <brf001@campus.mephi.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "create-react-app": "^4.0.0"
+  }
+}
