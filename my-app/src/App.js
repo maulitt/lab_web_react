@@ -4,7 +4,14 @@ import {useState} from 'react';
 
 
 function Main() {
-  return <h1>Main page</h1>;
+  return (
+      <div id="mainy">
+      <div className="mainpage">
+          <h1>Main page</h1>
+          <p>Of the app</p>
+      </div>
+      </div>
+    )
 }
 function Register() {
     const [name, setName] = useState("Name");
@@ -51,6 +58,9 @@ function Register() {
               </p>
               <p><input type="submit" value="Submit" /></p>
           </div>
+              <div className="right">
+                  <span className="rightpart">Enjoy<br/>the view</span>
+              </div>
           </div>
       </form>
       );
@@ -65,7 +75,9 @@ function Auth() {
     }
     return (
         <form onSubmit={submit}>
+            <div id="authi">
             <div className="registration">
+                <h1>Sign in</h1>
                 <p><b>Ваш логин (e-mail)</b> <br />
                     <label>
                         <input
@@ -88,6 +100,10 @@ function Auth() {
                 </p>
                 <p><input type="submit" value="Submit" /></p>
             </div>
+                <div className="right">
+                    <span className="rightpart">Enjoy<br/>the view</span>
+                </div>
+            </div>
         </form>
     );
 }
@@ -104,11 +120,11 @@ function App() {
   const results = useRoutes(Routes);
   return (
       <div className="App">
-          <ul>
-              <li><a href="/">Main</a></li>
-              <li><a href="/register">Registration</a></li>
-              <li><a href="/auth">Authentication</a></li>
-          </ul>
+          <nav>
+            <a href="/">Main</a>
+            <a href="/register">Registration</a>
+            <a href="/auth">Authentication</a>
+          </nav>
         {results}
       </div>
   );
